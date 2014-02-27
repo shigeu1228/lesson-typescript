@@ -1,4 +1,4 @@
 lesson-typescript
 =================
 
-lesson typescript
+`$ tsc --outDir output input/*`
