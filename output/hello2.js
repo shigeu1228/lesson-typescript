@@ -11,5 +11,5 @@ var Greeting;
     })();
     Greeting.Hello2 = Hello2;
 })(Greeting || (Greeting = {}));
-var hello2 = new Greeting.Hello2("Hello, World!");
+var hello2 = new Greeting.Hello2("Hello, World!aa");
 hello2.say();

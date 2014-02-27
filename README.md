@@ -1,4 +1,4 @@
 lesson-typescript
 =================
 
-`$ tsc --outDir output input/*`
+`$ ./build.sh`
