@@ -3,9 +3,9 @@
 input="input"
 output="output"
 
-find "./${input}" | grep -e "\.ts$" | sed -e "s/^.\/\///g" | while read line; do
-  dir=`echo ${line} | sed -e "s/\/[^\/]*\.ts$//g" | sed -e "s/${input}/${output}/"`
-  tsc --outDir ${dir} ${line}
+find "./${input}" | grep -e "\.ts$" | sed -e "s/^.\/\///g" | sed -e "s/[^\/]*\.ts$//g" | uniq | while read line; do
+  outDir=`echo ${line} | sed -e "s/${input}/${output}/"`
+  tsc --outDir ${outDir} ${line}*.ts
 done
 
 echo "completed!"
